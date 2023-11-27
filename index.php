@@ -364,7 +364,6 @@
     <header>
         <div class="container-header">
             <div class="title-text">
-                <!-- <img src="pp-logo.png" alt="Logo" width="50px"> -->
                 <h1>TODO's</h1>
             </div>
         </div>
@@ -374,9 +373,6 @@
         <div class="card-add">
             <input class="in-add" type="text" id="inadd" placeholder="Insert todays TODO's">
             <button onclick="addTask()" class="add"><img src="assets/Vector.png" alt="plus" class="img-add"></button>
-            <!-- <input type="text" id="task" placeholder="Add a new task" autocomplete="off">
-            <button onclick="addTask()">Add Task</button> -->
-
         </div>
     </section>
 
@@ -384,17 +380,7 @@
         <h1>Your TODO's</h1>
     </section>
 
-    <section class="todo" id="todo">
-        <!-- <div class="card-todo">
-            <div class="right">
-            <p class="text-todo">Finish Bootcamp</p>
-            </div>
-            <div class="left">
-                <button class="check" type="button"><img src="check.png" alt="plus" class="img-check"></button>
-                <button class="delete" type="button"><img src="delete.png" alt="plus" class="img-delete"></button>
-            </div> -->
-        </div>
-    </section>
+    <section class="todo" id="todo"></section>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -427,26 +413,11 @@
                     left.innerHTML =
                         `<button class="check" onclick="toggleTask(${tasks.id})" type="button"><img src="assets/check.png" alt="plus" class="img-check"></button> <button class="delete" onclick="deleteTask(${tasks.id})" type="button"><img src="assets/delete.png" alt="plus" class="img-delete"></button>`
 
-                    // const bCheck = document.createElement('button');
-                    // bCheck.classList.add('check');
-                    // const imgCheck = document.createElement('img');
-                    // imgCheck.classList.add('img-check');
-                    // imgCheck.src = 'assets/check.png';
-
-                    // const bDelete = document.createElement('button');
-                    // bDelete.classList.add('delete');
-                    // const imgDelete = document.createElement('img');
-                    // imgDelete.classList.add('img-check');
-                    // imgDelete.src = 'assets/delete.png';
 
                     todoList.appendChild(card);
                     card.appendChild(right);
                     card.appendChild(left);
                     right.appendChild(textTodo);
-                    // left.appendChild(bCheck)
-                    // left.appendChild(bDelete)
-                    // bCheck.appendChild(imgCheck)
-                    // bDelete.appendChild(imgDelete)
                 });
                 console.log(data);
             });
